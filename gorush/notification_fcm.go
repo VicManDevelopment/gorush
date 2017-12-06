@@ -1,10 +1,12 @@
 package gorush
 
 import (
+	"encoding/json"
 	"errors"
 	"fmt"
-
 	"github.com/appleboy/go-fcm"
+	"log"
+	"os"
 )
 
 // InitFCMClient use for initialize FCM Client.
@@ -117,6 +119,11 @@ Retry:
 		LogError.Error("FCM server error: " + err.Error())
 		return false
 	}
+
+	enc := json.NewEncoder(os.Stdout)
+
+	log.Println("notification json: ")
+	enc.Encode(notification)
 
 	res, err := client.Send(notification)
 	if err != nil {
