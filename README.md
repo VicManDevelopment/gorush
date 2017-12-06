@@ -2,14 +2,14 @@
 
 A push notification micro server using [Gin](https://github.com/gin-gonic/gin) framework written in Go (Golang).
 
-[![GoDoc](https://godoc.org/github.com/appleboy/gorush?status.svg)](https://godoc.org/github.com/appleboy/gorush)
+[![GoDoc](https://godoc.org/github.com/VicManDevelopment/gorush?status.svg)](https://godoc.org/github.com/VicManDevelopment/gorush)
 [![Build Status](http://drone.wu-boy.com/api/badges/appleboy/gorush/status.svg)](http://drone.wu-boy.com/appleboy/gorush)
 [![codecov](https://codecov.io/gh/appleboy/gorush/branch/master/graph/badge.svg)](https://codecov.io/gh/appleboy/gorush)
-[![Go Report Card](https://goreportcard.com/badge/github.com/appleboy/gorush)](https://goreportcard.com/report/github.com/appleboy/gorush)
+[![Go Report Card](https://goreportcard.com/badge/github.com/VicManDevelopment/gorush)](https://goreportcard.com/report/github.com/VicManDevelopment/gorush)
 [![codebeat badge](https://codebeat.co/badges/0a4eff2d-c9ac-46ed-8fd7-b59942983390)](https://codebeat.co/projects/github-com-appleboy-gorush)
 [![Docker Pulls](https://img.shields.io/docker/pulls/appleboy/gorush.svg)](https://hub.docker.com/r/appleboy/gorush/)
 [![](https://images.microbadger.com/badges/image/appleboy/gorush.svg)](https://microbadger.com/images/appleboy/gorush "Get your own image badge on microbadger.com")
-[![Release](https://github-release-version.herokuapp.com/github/appleboy/gorush/release.svg?style=flat)](https://github.com/appleboy/gorush/releases/latest)
+[![Release](https://github-release-version.herokuapp.com/github/appleboy/gorush/release.svg?style=flat)](https://github.com/VicManDevelopment/gorush/releases/latest)
 
 ## Contents
 
@@ -158,30 +158,30 @@ How to send push notification using `gorush` command? (Android or iOS)
 
 ### Download a binary
 
-The pre-compiled binaries can be downloaded from [release page](https://github.com/appleboy/gorush/releases).
+The pre-compiled binaries can be downloaded from [release page](https://github.com/VicManDevelopment/gorush/releases).
 
 With `Go` installed
 
 ```
-$ go get -u -v github.com/appleboy/gorush
+$ go get -u -v github.com/VicManDevelopment/gorush
 ```
 
 On linux
 
 ```sh
-$ wget https://github.com/appleboy/gorush/releases/download/1.10.0/gorush-1.10.0-linux-amd64 -O gorush
+$ wget https://github.com/VicManDevelopment/gorush/releases/download/1.10.0/gorush-1.10.0-linux-amd64 -O gorush
 ```
 
 On OS X
 
 ```sh
-$ wget https://github.com/appleboy/gorush/releases/download/1.10.0/gorush-1.10.0-darwin-amd64 -O gorush
+$ wget https://github.com/VicManDevelopment/gorush/releases/download/1.10.0/gorush-1.10.0-darwin-amd64 -O gorush
 ```
 
 On Windows
 
 ```sh
-$ wget https://github.com/appleboy/gorush/releases/download/1.10.0/gorush-1.10.0-windows-amd64.exe -O gorush.exe
+$ wget https://github.com/VicManDevelopment/gorush/releases/download/1.10.0/gorush-1.10.0-windows-amd64.exe -O gorush.exe
 ```
 
 ### Command Usage
@@ -572,7 +572,7 @@ Add other fields which user defined via `data` field.
 }
 ```
 
-Support send notification from different environment. See the detail of [issue](https://github.com/appleboy/gorush/issues/246).
+Support send notification from different environment. See the detail of [issue](https://github.com/VicManDevelopment/gorush/issues/246).
 
 ```diff
 {
@@ -692,7 +692,7 @@ core:
   worker_num: 0 # default worker number is runtime.NumCPU()
   queue_num: 0 # default queue number is 8192
   max_notification: 100
-- sync: false 
+- sync: false
 + sync: true
 ```
 
@@ -746,7 +746,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/appleboy/gorush/rpc/proto"
+	"github.com/VicManDevelopment/gorush/rpc/proto"
 
 	"google.golang.org/grpc"
 )
@@ -777,7 +777,7 @@ func main() {
 }
 ```
 
-See the Node.js example and see more detail frome [README](rpc/example/node/README.md): 
+See the Node.js example and see more detail frome [README](rpc/example/node/README.md):
 
 [embedmd]:# (rpc/example/node/client.js js)
 ```js
@@ -812,7 +812,7 @@ import (
 	"context"
 	"log"
 
-	"github.com/appleboy/gorush/rpc/proto"
+	"github.com/VicManDevelopment/gorush/rpc/proto"
 
 	"google.golang.org/grpc"
 )

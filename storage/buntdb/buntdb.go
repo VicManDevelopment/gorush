@@ -5,13 +5,13 @@ import (
 	"log"
 	"strconv"
 
-	"github.com/appleboy/gorush/config"
-	"github.com/appleboy/gorush/storage"
+	"github.com/VicManDevelopment/gorush/config"
+	"github.com/VicManDevelopment/gorush/storage"
 
 	"github.com/tidwall/buntdb"
 )
 
-// New func implements the storage interface for gorush (https://github.com/appleboy/gorush)
+// New func implements the storage interface for gorush (https://github.com/VicManDevelopment/gorush)
 func New(config config.ConfYaml) *Storage {
 	return &Storage{
 		config: config,

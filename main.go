@@ -8,9 +8,9 @@ import (
 	"path/filepath"
 	"strconv"
 
-	"github.com/appleboy/gorush/config"
-	"github.com/appleboy/gorush/gorush"
-	"github.com/appleboy/gorush/rpc"
+	"github.com/VicManDevelopment/gorush/config"
+	"github.com/VicManDevelopment/gorush/gorush"
+	"github.com/VicManDevelopment/gorush/rpc"
 
 	"golang.org/x/sync/errgroup"
 )

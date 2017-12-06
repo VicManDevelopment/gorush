@@ -388,7 +388,7 @@ func main() {
 	// Logger middleware will write the logs to gin.DefaultWriter even you set with GIN_MODE=release.
 	// By default gin.DefaultWriter = os.Stdout
 	r.Use(gin.Logger())
-	
+
 	// Recovery middleware recovers from any panics and writes a 500 if there was one.
 	r.Use(gin.Recovery())
 
@@ -422,11 +422,11 @@ func main() {
 func main() {
     // Disable Console Color, you don't need console color when writing the logs to file.
     gin.DisableConsoleColor()
-    
+
     // Logging to a file.
     f, _ := os.Create("gin.log")
     gin.DefaultWriter = io.MultiWriter(f)
-    
+
     // Use the following code if you need to write the logs to file and console at the same time.
     // gin.DefaultWriter = io.MultiWriter(f, os.Stdout)
 
@@ -1315,4 +1315,4 @@ func main() {
 Awesome project lists using [Gin](https://github.com/gin-gonic/gin) web framework.
 
 * [drone](https://github.com/drone/drone): Drone is a Continuous Delivery platform built on Docker, written in Go
-* [gorush](https://github.com/appleboy/gorush): A push notification server written in Go.
+* [gorush](https://github.com/VicManDevelopment/gorush): A push notification server written in Go.
