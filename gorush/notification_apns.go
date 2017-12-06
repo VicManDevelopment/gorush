@@ -4,13 +4,16 @@ import (
 	"crypto/ecdsa"
 	"crypto/tls"
 	"errors"
+	"log"
 	"path/filepath"
 	"time"
 
+	"encoding/json"
 	"github.com/sideshow/apns2"
 	"github.com/sideshow/apns2/certificate"
 	"github.com/sideshow/apns2/payload"
 	"github.com/sideshow/apns2/token"
+	"os"
 )
 
 // InitAPNSClient use for initialize APNs Client.
@@ -216,6 +219,11 @@ Retry:
 
 	notification := GetIOSNotification(req)
 	client := getApnsClient(req)
+
+	enc := json.NewEncoder(os.Stdout)
+
+	log.Println("notification json: ")
+	enc.Encode(notification)
 
 	for _, token := range req.Tokens {
 		notification.DeviceToken = token
